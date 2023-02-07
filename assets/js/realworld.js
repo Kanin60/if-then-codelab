@@ -6,22 +6,39 @@
 der et korrekte svar:
 nej 
 */
+// const myAnsverInput = document.getElementById('answerOne');
+// const myAnsverButton = document.getElementById('answerButton');
+// const myAnsverFeedbackElement = document.getElementById('answerFeedback');
 
+// myAnsverButton.addEventListener('click', (e) => {
+//   e.preventDefault()
 
-const myAnsverInput = document.getElementById('answerOne');
-const myAnsverButton = document.getElementById('answerButton');
-const myAnsverFeedbackElement = document.getElementById('answerFeedback');
-
-myAnsverButton.addEventListener('click', () => {
-
-    /* din kode her.  husk at skrive view funktion der viser om svaret er korrekt i myAnsverFeedbackElement, brug evt. innerHTML*/
-
-});
+//   if(myAnsverInput.value === 'sandt' || 'sandtDisney'){
+//     myAnsverFeedbackElement.innerHTML = 'Det er rigtigt!';
+// } else if (myAnsverInput.value === 'falsk'){
+//   myAnsverFeedbackElement.innerHTML = 'WRONG!';
+//  } 
+// });
 
 /*Opgave 2: udkommenter opgave 1, og omskriv nu din funktion til to korrekte svar:
 nej
 ja i disney film
 */
+const svarMulighed = document.getElementById('answerOne');
+const button = document.getElementById('answerButton');
+const resultatBesked = document.getElementById('answerFeedback');
+
+button.addEventListener('click', (e)=>{
+  e.preventDefault();
+
+  if(svarMulighed.value === 'sandt'){
+    resultatBesked.innerHTML = 'Det er korrekt! - Om end lidt kedeligt...'
+  } else if(svarMulighed.value === 'sandtDisney'){
+    resultatBesked.innerHTML = "JA! Selvfølgelig findes lyserøde elefanter! Who doesn't know Dumbo??"
+  } else if( svarMulighed.value === 'falsk'){
+    resultatBesked.innerHTML = 'Øh, måske skal du stille flasken...'
+  }
+});
 
 
 /*opgave 3: skriv en kode der valider formen med følgende elementer: (denne opgave er på extreme niveau) 
@@ -40,10 +57,10 @@ ja i disney film
 
 
 /* helper functions*/
-function validateEmail(email) {
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-}
+// function validateEmail(email) {
+//     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+//     return re.test(String(email).toLowerCase());
+//}
 
 /* eks på kald:
 if (validateEmail("test@example.com")) {
